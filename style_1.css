@@ -1,0 +1,344 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0b1120;
+color:#f8fafc;
+line-height:1.7;
+}
+
+/* Navbar */
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#111827;
+border-bottom:1px solid #334155;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#38bdf8;
+}
+
+/* Hero */
+
+.hero{
+min-height:100vh;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:80px;
+padding:120px 10%;
+background:linear-gradient(
+135deg,
+#0b1120,
+#111827,
+#0f172a
+);
+}
+
+.hero-image img{
+width:300px;
+height:300px;
+border-radius:50%;
+object-fit:cover;
+border:4px solid #38bdf8;
+box-shadow:0 0 40px rgba(56,189,248,0.4);
+}
+
+.hero-content{
+max-width:500px;
+}
+
+.hero-content h1{
+font-size:60px;
+line-height:1.2;
+}
+
+.hero-content span{
+color:#38bdf8;
+}
+
+.hero-content p{
+margin:20px 0;
+color:#cbd5e1;
+font-size:18px;
+}
+
+button{
+padding:12px 28px;
+border:none;
+border-radius:30px;
+background:#38bdf8;
+color:white;
+cursor:pointer;
+transition:0.3s;
+font-weight: 600;
+}
+
+button:hover{
+transform:translateY(-3px);
+}
+
+.social-links{
+    display:flex;
+    gap:15px;
+    margin-top: 15px;
+}
+
+.social-links a{
+    text-decoration:none;
+    background-color: #32c5ff;
+    color:white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.social-links a:hover{
+    transform: translateY(-3px);
+}
+
+/* Sections */
+
+section{
+padding:80px 10%;
+}
+
+section h2{
+text-align:center;
+font-size:40px;
+margin-bottom:40px;
+color:white;
+}
+
+section h2::after{
+content:"";
+display:block;
+width:80px;
+height:4px;
+background:#38bdf8;
+margin:10px auto;
+border-radius:10px;
+}
+
+/* About */
+
+#about{
+background:#111827;
+border:1px solid #334155;
+border-radius:20px;
+margin:30px;
+}
+
+#about p{
+text-align:center;
+max-width:900px;
+margin:auto;
+}
+
+/* Skills */
+
+#skill div{
+background:#111827;
+border:1px solid #334155;
+border-radius:20px;
+padding:25px;
+margin:20px 0;
+transition:0.3s;
+}
+
+#skill div:hover{
+transform:translateY(-5px);
+border-color:#38bdf8;
+}
+
+#skill h3{
+margin-bottom:15px;
+color:#38bdf8;
+}
+
+/* Projects */
+
+#project div{
+background:#111827;
+border:1px solid #334155;
+border-radius:20px;
+padding:25px;
+margin:20px 0;
+transition:0.3s;
+}
+
+#project div:hover{
+transform:translateY(-5px);
+border-color:#38bdf8;
+}
+
+#project h3{
+color:#38bdf8;
+margin-bottom:10px;
+}
+
+/* Education */
+
+#education{
+background:#111827;
+border:1px solid #334155;
+border-radius:20px;
+margin:30px;
+}
+
+#education h3{
+color:#38bdf8;
+margin-top:20px;
+}
+
+/* Certification */
+
+#certification li{
+list-style:none;
+background:#111827;
+border:1px solid #334155;
+padding:18px;
+margin:15px 0;
+border-radius:15px;
+}
+
+/* Contact */
+
+#contact{
+text-align:center;
+}
+
+#contact p{
+margin:10px 0;
+}
+
+/* Footer */
+
+footer{
+text-align:center;
+padding:25px;
+background:#111827;
+border-top:1px solid #334155;
+}
+
+.menu-btn{
+    display:none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px){
+    .menu-btn{
+        display:block;
+    }
+
+    nav{
+        display: space-between;
+    }
+
+    nav ul{
+        display: none;
+        position:absolute;
+        top:70px;
+        left: 0;
+        width: 100%;
+        background: #111827;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    nav ul.active{
+        display: flex;
+    }
+
+    nav ul li{
+        margin: 10px 0;
+    }
+
+    nav ul li a{
+        font-size: 14px;
+    }
+
+    .hero{
+        flex-direction: column;
+        text-align: center;
+        padding: 120px 20px 50px;
+        gap: 30px;
+        height: auto;
+    }
+
+    .hero-image{
+        width: 100%;
+        font-size: 2rem;
+    }
+
+    .hero-image img{
+        width: 200px;
+        height: 200px;
+    }
+
+    .hero-content{
+        width: 100%;
+    }
+
+    .hero-content h1{
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+
+    .hero-content p{
+        font-size: 14px;
+        line-height: 1.8;
+        padding: 0 10px;
+    }
+
+    section{
+        padding: 60px 20px;
+    }
+
+    #about,
+    #education{
+        margin: 10px;
+    }
+
+    #skill div,
+    #project div{
+        width: 100%;
+    }
+
+    .social-links{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
